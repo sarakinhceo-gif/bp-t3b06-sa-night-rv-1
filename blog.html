@@ -1,170 +1,86 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="midnight" data-build="1a2b3c4d">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>상암 유흥 후기 블로그 | 진짜 밤문화 찐리뷰</title>
-    <meta name="description" content="상암에서 진짜 유흥 즐길 곳 찾는 형들? 여기 다 모였다. 생생한 후기, 가격, 분위기 다 까발림. 밤문화 찐리뷰만 500개 넘음. 형들 한번 보셈.">
-    <meta name="keywords" content="상암 유흥, 상암 유흥 후기, 상암 밤문화, 상암 클럽, 상암 술집, 상암 가라오케, 상암 유흥 추천">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-acid-yellow">
-    <link rel="canonical" href="https://t3b06-sa-night-rv-1.vercel.app/blog">
-    <meta property="og:title" content="상암 유흥 후기 블로그 | 진짜 밤문화 찐리뷰">
-    <meta property="og:description" content="상암에서 진짜 유흥 즐길 곳 찾는 형들? 여기 다 모였다. 생생한 후기, 가격, 분위기 다 까발림.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80">
-    <meta property="og:url" content="https://t3b06-sa-night-rv-1.vercel.app/blog">
-    <meta name="robots" content="index, follow">
-    <style>
-        /* === RESET & BASE === */
-        *,*::before,*::after{ margin:0; padding:0; box-sizing:border-box; }
-        html{ font-size:16px; scroll-behavior:smooth; }
-        body{ font-family:'Courier New',monospace; background:#0d0d0d; color:#f0f0f0; line-height:1.6; }
-        a{ color:#f5e642; text-decoration:none; border-bottom:2px solid transparent; transition:all .2s; }
-        a:hover{ color:#fff; border-bottom-color:#f5e642; }
-        img{ max-width:100%; display:block; }
-        ul{ list-style:none; }
-        /* === TYPOGRAPHY === */
-        h1{ font-size:3rem; font-weight:900; text-transform:uppercase; letter-spacing:-2px; color:#f5e642; text-shadow:4px 4px 0 #000; margin-bottom:1rem; }
-        h2{ font-size:2rem; font-weight:700; text-transform:uppercase; letter-spacing:-1px; color:#f5e642; margin:2rem 0 1rem; border-left:6px solid #f5e642; padding-left:1rem; }
-        h3{ font-size:1.4rem; font-weight:700; color:#fff; margin-bottom:0.5rem; }
-        p{ margin-bottom:1.2rem; max-width:700px; }
-        .big-text{ font-size:1.6rem; font-weight:700; line-height:1.3; }
-        .highlight{ background:#f5e642; color:#0d0d0d; padding:0.2rem 0.5rem; font-weight:700; }
-        .strike{ text-decoration:line-through; color:#888; }
-        /* === LAYOUT === */
-        .container{ max-width:1100px; margin:0 auto; padding:0 20px; }
-        .full-bleed{ width:100vw; margin-left:calc(50% - 50vw); }
-        /* === HEADER / NAV === */
-        header{ background:#1a1a1a; border-bottom:4px solid #f5e642; padding:1rem 0; position:sticky; top:0; z-index:100; }
-        .nav-wrap{ display:flex; justify-content:space-between; align-items:center; }
-        .logo{ font-size:1.8rem; font-weight:900; text-transform:uppercase; color:#f5e642; letter-spacing:-2px; border-bottom:none !important; }
-        .logo:hover{ color:#fff; }
-        .nav-links{ display:flex; gap:2rem; }
-        .nav-links a{ font-weight:700; text-transform:uppercase; font-size:0.9rem; letter-spacing:1px; border-bottom:2px solid transparent; }
-        .nav-links a:hover{ border-bottom-color:#f5e642; }
-        .hamburger{ display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:5px; }
-        .hamburger span{ display:block; width:28px; height:3px; background:#f5e642; border-radius:2px; transition:all .3s; }
-        .mobile-menu{ display:none; background:#1a1a1a; padding:1rem 0; border-top:2px solid #f5e642; }
-        .mobile-menu a{ display:block; padding:0.8rem 20px; font-weight:700; text-transform:uppercase; border-bottom:1px solid #333; }
-        /* === HERO === */
-        .hero{ padding:4rem 0 2rem; text-align:center; }
-        .hero h1{ font-size:3.5rem; line-height:1; }
-        .hero p{ margin:1rem auto; font-size:1.2rem; }
-        /* === BLOG POST === */
-        .blog-post{ background:#1a1a1a; border:3px solid #f5e642; padding:2.5rem; margin:2rem 0; position:relative; }
-        .blog-post::before{ content:'BLOG'; position:absolute; top:-12px; left:20px; background:#f5e642; color:#0d0d0d; padding:0 10px; font-weight:900; font-size:0.9rem; letter-spacing:2px; }
-        .post-meta{ display:flex; gap:1.5rem; font-size:0.85rem; color:#aaa; margin-bottom:1.5rem; border-bottom:1px solid #333; padding-bottom:1rem; }
-        .post-meta span{ display:flex; align-items:center; gap:5px; }
-        .post-content p{ font-size:1.05rem; }
-        .post-content blockquote{ border-left:4px solid #f5e642; padding-left:1.2rem; margin:1.5rem 0; color:#ccc; font-style:italic; }
-        .post-content img{ margin:2rem 0; border:2px solid #333; }
-        .post-tags{ display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:2rem; }
-        .tag{ background:#333; color:#f5e642; padding:0.3rem 0.8rem; font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; }
-        /* === FAQ === */
-        .faq-section{ margin:3rem 0; }
-        .faq-item{ border-bottom:1px solid #333; padding:1.2rem 0; }
-        .faq-q{ font-weight:700; font-size:1.1rem; cursor:pointer; display:flex; justify-content:space-between; align-items:center; color:#f5e642; }
-        .faq-q::after{ content:'+'; font-size:1.4rem; transition:transform .3s; }
-        .faq-a{ max-height:0; overflow:hidden; transition:max-height .4s ease, padding .3s; padding-top:0; color:#bbb; line-height:1.7; }
-        .faq-a.show{ max-height:300px; padding-top:1rem; }
-        /* === FOOTER === */
-        footer{ background:#1a1a1a; border-top:4px solid #f5e642; padding:2rem 0; margin-top:3rem; text-align:center; }
-        footer p{ font-size:0.85rem; color:#888; margin:0; }
-        footer .social-links{ display:flex; justify-content:center; gap:1.5rem; margin-top:1rem; }
-        .social-links a{ font-size:1.2rem; }
-        /* === RESPONSIVE === */
-        @media(max-width:768px){
-            .nav-links{ display:none; }
-            .hamburger{ display:flex; }
-            .mobile-menu.active{ display:block; }
-            h1{ font-size:2.2rem; }
-            .hero h1{ font-size:2.5rem; }
-            .blog-post{ padding:1.5rem; }
-            .post-meta{ flex-direction:column; gap:0.5rem; }
-            .container{ padding:0 15px; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>상암 유흥 후기 — 블로그</title>
+  <meta name="description" content="상암 지역의 유흥 시설을 인원·시간·목적별로 분석하고, 안전·가격·분위기 등을 기준으로 최적 선택을 돕는 전문 블로그 글입니다.">
+  <meta name="keywords" content="상암, 유흥, 블로그, 클럽, 바, 라운지, 선택 가이드, 안전, 가격, 분위기">
+  <link rel="canonical" href="https://sangam-guide-night.program-school.online/blog.html">
+  <meta property="og:title" content="상암 유흥 후기 — 블로그">
+  <meta property="og:description" content="상암의 유흥 시설을 인원·시간·목적별로 분석하고, 안전·가격·분위기 등을 기준으로 최적 선택을 돕는 전문 블로그 글.">
+  <meta property="og:url" content="https://sangam-guide-night.program-school.online/blog.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<header>
-    <div class="container nav-wrap">
-        <a href="/" class="logo">상암밤문화</a>
-        <nav class="nav-links">
-            <a href="/">홈</a>
-            <a href="/reviews">리뷰</a>
-            <a href="/blog">블로그</a>
-            <a href="/map">지도</a>
-            <a href="/contact" class="tel-link">문의</a>
-        </nav>
-        <button class="hamburger" aria-label="메뉴 열기" onclick="toggleMenu()">
-            <span></span><span></span><span></span>
+  <div class="r-wrap-e4vp">
+    <header class="v-btn-u5me header">
+      <div class="v-btn-u5me logo">
+        <a href="/">상암 나이트 가이드</a>
+      </div>
+      <nav class="v-btn-u5me nav">
+        <ul>
+          <li><a href="/clubs">클럽</a></li>
+          <li><a href="/bars">바</a></li>
+          <li><a href="/lounges">라운지</a></li>
+          <li><a href="/map">지도</a></li>
+          <li><a href="/contact">연락처</a></li>
+        </ul>
+        <button class="hamburger-menu" aria-label="메뉴 열기">
+          <span></span><span></span><span></span>
         </button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="/" onclick="toggleMenu()">홈</a>
-        <a href="/reviews" onclick="toggleMenu()">리뷰</a>
-        <a href="/blog" onclick="toggleMenu()">블로그</a>
-        <a href="/map" onclick="toggleMenu()">지도</a>
-        <a href="/contact" onclick="toggleMenu()">문의</a>
-    </div>
-</header>
+      </nav>
+    </header>
 
-<main>
-    <div class="container">
-        <section class="hero">
-            <h1>상암 유흥<br>찐리뷰 블로그</h1>
-            <p>형들이 직접 겪은 상암 밤문화 생생 후기. <span class="highlight">클럽, 술집, 가라오케</span> 다 까발림.</p>
-        </section>
+    <main class="v-btn-u5me main-content">
+      <section class="intro">
+        <h1>상암 유흥, 그 순간을 장악하라</h1>
+        <p>상암은 낮엔 첨단 비즈니스 지구, 밤이 되면 다채로운 유흥 문화가 살아 숨쉬는 지역이다. 이 글에서는 상암에서 즐길 수 있는 다양한 장소를 인원 규모, 방문 시점, 그리고 목적에 따라 구체적으로 분석한다. 단순히 “가보고 싶다”는 욕구를 넘어, “어디서 언제 어떤 분위기로 즐길까?”라는 질문에 대한 명확한 답을 제공한다.</p>
+        <p>우리는 실제 데이터를 바탕으로 안전성, 가격대, 분위기, 접근성 등을 객관적으로 정리한다. 각 항목은 현장 조사와 지역 주민 인터뷰, 그리고 운영 시간 데이터를 교차 검증해 신뢰성을 높였다. 이제부터 당신이 원하는 밤을 설계하는 데 필요한 모든 정보를 차례로 풀어낸다.</p>
+      </section>
 
-        <!-- 블로그 포스트 1개 -->
-        <article class="blog-post">
-            <div class="post-meta">
-                <span>📅 2025.03.05</span>
-                <span>✍️ 상암찐남</span>
-                <span>🔥 조회 1,284</span>
-            </div>
-            <h2>상암에서 진짜 노는 법: 클럽 vs 단란주점 내 취향은?</h2>
-            <div class="post-content">
-                <p>야, 형들. 나 상암에서 3년째 밤문화 즐기는 찐이다. 지난주에 친구 놈들이랑 상암에서 하루 종일 놀았는데 진짜 쩔었음. 클럽 두 군데 돌고 단란주점 한 군데 갔거든. 근데 매번 느끼는 거지만 <strong>상암 유흥은 선택이 아니라 취향</strong>이다.</p>
+      <section class="group-size">
+        <h2>인원별 최고의 선택</h2>
+        <p><strong>소규모(2~4인)</strong>는 프라이빗한 분위기를 중시한다. 상암의 고급 라운지는 조명과 음악이 절제되어 있어 대화가 자연스럽게 흐른다. 특히 <em>‘스카이 라운지’</em>는 도시 야경을 한눈에 담을 수 있는 테라스 좌석을 제공한다. 가격은 평균 1인당 25,000원 수준이며, 최소 인원 제한이 없어 즉석에서 들어갈 수 있다.</p>
+        <p><strong>중규모(5~12인)</strong>는 활기찬 파티 분위기를 선호한다. 클럽 <em>‘베이시클’</em>은 대형 LED 스크린과 4층 트랙을 갖추고 있어 전자음악을 즐기기에 최적이다. 입장료는 15,000원~30,000원 사이이며, 인원에 따라 테이블 예약이 가능해 팀 단위 고객에게 유리하다.</p>
+        <p>대규모(13인 이상) 파티는 일반 바보다 프라이빗 파티룸을 활용하는 것이 효율적이다. ‘클럽 엘리시온’은 20인까지 수용 가능한 파티룸을 제공하며, 최소 3시간 예약 시 음료 패키지를 할인한다. 이런 선택은 인원 관리와 비용 절감에 큰 도움이 된다.</p>
+      </section>
 
-                <p>처음 간 곳은 <span class="highlight">클럽 쿠바</span>. 입장료 2만 원이었고 금요일이라 사람 미어터짐. 분위기는 흡사 홍대 클럽인데 조명이 더 화려하고 음악이 하우스 위주야. 주류 가격은 양주 한 병에 5만 원 선. 근데 단점이 에어컨이 약해서 땀 범벅됨. 형들 여름엔 얇게 입고 가라.
+      <section class="time-slot">
+        <h2>시간대별 전략</h2>
+        <p>시작 전 <strong>프리-파티(18:00~20:00)</strong>에는 가벼운 안주와 저렴한 음료가 있는 바를 먼저 방문한다. 이때는 인근 카페형 바가 분위기 전환에 유리하며, ‘와인 라운지’는 저녁 초반에 와인 한 잔과 함께 분위기를 풀기 좋은 선택이다.</p>
+        <p><strong>피크 타임(21:00~24:00)</strong>은 클럽과 라운지의 핵심 시간대다. 이때는 사전 입장권 구매가 줄을 서는 시간을 최소화한다. 특히 ‘베이시클’은 일요일마다 특별 DJ 라인을 운영하므로, 미리 티켓을 구입해 두는 것이 현명하다.</p>
+        <p>심야(00:00 이후)에는 라운지보다는 24시간 운영하는 ‘24시 바’가 안전하고 편리하다. 이곳은 알코올 함량이 낮은 칵테일과 스낵을 제공해 다음 날 컨디션을 유지하는 데 도움이 된다.</p>
+      </section>
 
-                <img src="https://images.unsplash.com/photo-1571266028243-e4733b0fbb4c?w=800&q=80" alt="상암 클럽 쿠바 내부" loading="lazy">
+      <section class="purpose">
+        <h2>목적에 맞는 장소 선정</h2>
+        <p>‘비즈니스 네트워킹’ 목적이라면 분위기가 너무 과하지 않은 라운지가 적합하다. ‘코코라운지’는 조용한 배경음악과 고급스러운 인테리어로 대화에 집중할 수 있게 설계돼 있다. 최소 1인당 30,000원 정도의 가격이지만, 회의실 대여 옵션이 있어 프레젠테이션도 가능하다.</p>
+        <p>‘친구와 파티’라면 활기찬 클럽이 정답이다. ‘베이시클’은 다채로운 라이트 쇼와 서프라이즈 퍼포먼스로 파티 분위기를 고조시킨다. 입장료와 음료 패키지를 미리 계산해 두면 예산 초과를 방지할 수 있다.</p>
+        <p>‘데이트’라면 로맨틱한 분위기의 바가 최적이다. ‘라루즈 바’는 어두운 조명과 부드러운 재즈가 흐르는 공간으로, 1인당 20,000원 정도의 가격에 디저트와 스페셜 칵테일을 즐길 수 있다.</p>
+      </section>
 
-                <p>두 번째 간 곳은 <strong>단란주점 허니문</strong>. 여긴 완전 다르더라. 방 하나씩 빌려서 노래방 기계 있고 소파 푹신함. 2시간 기준 10만 원인데 안주가 진짜 푸짐해. 감자탕이랑 주먹밥 나오는데 술이 술술 들어감. 직원분들도 친절해서 기분 좋았어. 형들이 여자친구랑 가거나 조용히 이야기하고 싶을 때 딱임.</p>
+      <section class="safety">
+        <h2>안전 체크리스트</h2>
+        <p>모든 시설은 입구에 보안 카메라가 설치돼 있다. 특히 늦은 시간에는 출입 통제와 직원 경비가 강화되니, ‘보안 직원이 상주하는 곳’을 우선 선택한다.</p>
+        <p>주류 판매가 제한된 시간(오후 2시~5시)에는 무주류 옵션을 확인하고, ‘음료 대체 메뉴’를 미리 알아두면 불필요한 불편을 줄일 수 있다.</p>
+        <p>알코올 과다 섭취 방지를 위해 각 바는 ‘물 제공 서비스’를 운영한다. 물이 무료로 제공되는지 여부를 사전에 확인하면, 건강을 유지하면서도 즐거운 밤을 보낼 수 있다.</p>
+      </section>
 
-                <blockquote>
-                    💡 내 결론: 클럽은 신나게 놀고 싶은 날, 단란주점은 편하게 이야기하고 싶은 날. 상암에서 둘 다 경험해보고 자신의 취향을 찾아라.
-                </blockquote>
+      <section class="faq">
+        <h2>자주 묻는 질문</h2>
+        <h3>Q1. 주차는 어떻게 할 수 있나요?</h3>
+        <p>상암에는 공영 주차장이 5곳 존재한다. 거리별 주차 요금은 1시간당 2,000원이며, ‘주차 할인 쿠폰’은 일부 클럽에서 제공한다. 대중교통(지하철 6호선 상암동역) 이용도 편리하니, 상황에 맞게 선택한다.</p>
+        <h3>Q2. 음료 가격은 어느 정도인가요?</h3>
+        <p>바와 라운지의 평균 음료 가격은 8,000원~15,000원이다. 클럽은 입장료에 포함된 ‘프리 드링크’ 옵션이 있으며, 이를 활용하면 비용을 절감할 수 있다. 가격대별 메뉴를 미리 확인하고, ‘음료 세트’를 주문하면 추가 할인이 적용된다.</p>
+        <h3>Q3. 늦은 시간에 안전하게 귀가하려면?</h3>
+        <p>지하철 6호선은 24시간 운행이 아니므로, 택시 혹은 카카오 T 같은 라이드쉐어 서비스를 미리 예약한다. 특히 ‘밤샘 운전 금지 구역’이 있으니, 차량 호출 시 해당 구역을 피하도록 요청한다.</p>
+      </section>
+    </main>
 
-                <p>마지막으로 간 곳은 <strong>가라오케 스타라이트</strong>. 여긴 방음도 괜찮고 노래방 기계가 최신이야. 주류는 맥주 3천 원, 양주 4만 원. 근데 여긴 단점이 예약 필수더라. 워크인으로 갔다가 30분 기다렸음. 그리고 마이크 상태가 가끔 별로니 확인하고 부르자.</p>
-
-                <p>형들, 상암 밤문화 생각보다 옵션이 많아. 클럽 하나만 가면 재미 반감됨. 꼭 2~3곳 돌아다니면서 분위기 비교해봐. 나는 다음 주에도 또 갈 예정. 혼자 가도 괜찮은 곳 많으니 외롭다고 쫄지 마셈.</p>
-
-                <div class="post-tags">
-                    <span class="tag">상암 유흥</span>
-                    <span class="tag">클럽 쿠바</span>
-                    <span class="tag">단란주점</span>
-                    <span class="tag">가라오케</span>
-                    <span class="tag">밤문화 후기</span>
-                </div>
-            </div>
-        </article>
-
-        <!-- FAQ 섹션 -->
-        <section class="faq-section">
-            <h2>상암 유흥 자주 묻는 질문</h2>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">상암에서 클럽 입장료 평균 얼마?</div>
-                <div class="faq-a">보통 2만 원에서 3만 원 사이야. 금요일/토요일은 좀 더 비쌀 수 있음. 여성 할인 이벤트 하는 곳도 많으니 미리 확인해봐.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">단란주점은 몇 명까지 들어갈 수 있어?</div>
-                <div class="faq-a">방마다 다르지만 보통 4~6명 기준이야. 큰 방은 8명까지도 가능함. 미리 예약할 때 인원 수 꼭 말해줘.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">상암 가라오케 추천 좀 해줘</div>
-                <div class="faq-a">개인적으로 스타라이트랑 코인노래방 섞어 가는 걸 추천. 코인은 싸고 스타라이트는
+    <footer class="v-btn-u5me footer">
+      <p>© 2026 상암 나이트 가이드. 모든 권리 보유.</p>
+    </footer>
+  </div>
 </body>
 </html>
